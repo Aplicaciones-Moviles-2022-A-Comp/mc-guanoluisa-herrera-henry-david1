@@ -1,0 +1,1 @@
+Ingrediente[0]: [Ingrediente 1 Cebolla , Ingrediente 2:Camaron ,Ingrediente 3: Pescado, Ingrediente 4: Tomate, Ingrediente 5 Pulpo] <- Plato { Nombre del Plato Tipico: Ceviche , Origen: Guayaquil Region: Costa, Calificacion: Excelente, Precio: 5.0} 

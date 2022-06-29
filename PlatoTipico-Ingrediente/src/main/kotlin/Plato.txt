@@ -1,0 +1,1 @@
+Plato[0]: [Nombre Plato: encebollado , Origen: Guayaquil , Region: Costa, Calificacion: Bueno  ,Precio: 2.5]

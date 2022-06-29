@@ -1,0 +1,1 @@
+Ingrediente[0]: [Ingrediente 1 Alvacora , Ingrediente 2:cebollas ,Ingrediente 3: tomates, Ingrediente 4: limon, Ingrediente 5 hiervitas] <- Plato { Nombre del Plato Tipico: encebollado , Origen: Guayaquil Region: Costa, Calificacion: Bueno, Precio: 2.5} 
