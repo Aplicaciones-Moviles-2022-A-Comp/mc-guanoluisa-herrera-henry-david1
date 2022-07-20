@@ -11,25 +11,25 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.*
 
-class Raza : AppCompatActivity() {
+class Ingrediente : AppCompatActivity() {
     var idItemSeleccionado = 0
-    var nombreEspecie = ""
+    var nombrePlato = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_raza)
-        val titulo = findViewById<TextView>(R.id.textView_raza)
+        val titulo = findViewById<TextView>(R.id.textView_ingrediente)
         val listView = findViewById<ListView>(R.id.lv_list_view)
-        val botonRegresar = findViewById<Button>(R.id.btnRegresarRaza)
+        val botonRegresar = findViewById<Button>(R.id.btnRegresarIng)
         botonRegresar.setOnClickListener {
             val i = Intent(this, Plato::class.java)
             startActivity(i)
         }
         val bundle = intent.extras
-        nombreEspecie = bundle?.getString("idEspecie").toString()
-        if (nombreEspecie == null)
-            nombreEspecie = ""
-        titulo.setText("$nombreEspecie")
-        val nuevoArreglo = BBaseDatosMemoria.arregloBRaza.filter { it.nombreEspecie == nombreEspecie }
+        nombrePlato = bundle?.getString("idPlato").toString()
+        if (nombrePlato == null)
+            nombrePlato = ""
+        titulo.setText("$nombrePlato")
+        val nuevoArreglo = BBaseDatosMemoria.arregloBRaza.filter { it.nombrePlato == nombrePlato }
         val adaptador = ArrayAdapter(
             this, // Contexto
             android.R.layout.simple_list_item_1, // como se va a ver (XML)
@@ -39,8 +39,8 @@ class Raza : AppCompatActivity() {
         val botonAnadirListView = findViewById<Button>(R.id.btnCrearRaza)
         botonAnadirListView
             .setOnClickListener {
-                val i = Intent(this, CrearRaza::class.java)
-                i.putExtra("idEspecieCrear", "$nombreEspecie")
+                val i = Intent(this, CrearIngrediente::class.java)
+                i.putExtra("idPlatoCrear", "$nombrePlato")
                 startActivity(i)
             }
 
@@ -64,9 +64,9 @@ class Raza : AppCompatActivity() {
     ): Boolean {
         return when (item.itemId) {
             R.id.mi_editar -> {
-                val i = Intent(this, EditarRaza::class.java)
-                val nuevoArreglo = BBaseDatosMemoria.arregloBRaza.filter { it.nombreEspecie == nombreEspecie }
-                i.putExtra("nombreRaza", "${nuevoArreglo[idItemSeleccionado].nombreRaza}");
+                val i = Intent(this, EditarIngrediente::class.java)
+                val nuevoArreglo = BBaseDatosMemoria.arregloBRaza.filter { it.nombrePlato == nombrePlato }
+                i.putExtra("nombreIngrediente", "${nuevoArreglo[idItemSeleccionado].nombrePlato}");
                 startActivity(i);
                 return true
             }

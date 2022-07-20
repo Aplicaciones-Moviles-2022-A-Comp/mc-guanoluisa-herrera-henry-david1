@@ -4,47 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF9800"
-    tools:context=".EditarEspecie">
+    android:background="#03A9F4"
+    tools:context=".EditarPlato">
 
 
     <EditText
-        android:id="@+id/txtEditPiel"
+        android:id="@+id/txtEditPrecioPlato"
         android:layout_width="313dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
-        android:hint="Tipo de piel"
+        android:hint="Precio"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtnewNombreRaza" />
+        app:layout_constraintTop_toBottomOf="@+id/txtIngrediente1" />
 
     <EditText
-        android:id="@+id/txtEditPeso"
+        android:id="@+id/txtEditProvincia"
         android:layout_width="313dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="16dp"
-        android:hint="Porcentaje en el Ecuador"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEditNumero" />
-
-    <EditText
-        android:id="@+id/txtEditNumero"
-        android:layout_width="313dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:layout_marginTop="24dp"
-        android:hint="Numero de Especie"
+        android:hint="Provincia"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEditPiel" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEditRegion" />
 
     <EditText
-        android:id="@+id/txtnewNombreRaza"
+        android:id="@+id/txtEditRegion"
         android:layout_width="313dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:hint="Region"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditPrecioPlato" />
+
+    <EditText
+        android:id="@+id/txtIngrediente1"
+        android:layout_width="313dp"
+        android:layout_height="48dp"
         android:layout_marginTop="132dp"
         android:hint="Nombre"
         android:inputType="textEmailAddress"
@@ -53,46 +53,22 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnCrearNuevaRaza"
+        android:id="@+id/btnCrearNewPlato"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginBottom="200dp"
         android:backgroundTint="#FF403C36"
-        android:text="Editar Especie"
+        android:text="Editar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.536"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rdg_amantan" />
-
-    <RadioGroup
-        android:id="@+id/rdg_amantan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        tools:ignore="MissingConstraints">
-
-        <RadioButton
-            android:id="@+id/rdb_Edittrue"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="si" />
-
-        <RadioButton
-            android:id="@+id/rdb_DomesticadoFalse"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="no" />
-
-    </RadioGroup>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textTituloEditarRaza"
+        android:id="@+id/txtTituloIngrediente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Editar Especie"
-        app:layout_constraintBottom_toTopOf="@+id/txtnewNombreRaza"
+        android:text="@string/title_edit_plato"
+        app:layout_constraintBottom_toTopOf="@+id/txtIngrediente1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.152"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,28 +76,30 @@
         app:layout_constraintVertical_bias="0.389" />
 
     <TextView
-        android:id="@+id/textNombreEspecie"
+        android:id="@+id/textNombrePlato"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="nombreEspecie"
+        android:text="@string/title_nombre_plato"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtnewNombreRaza"
+        app:layout_constraintBottom_toTopOf="@+id/txtIngrediente1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.819"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.695" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="¿Amantan?"
+    <EditText
+        android:id="@+id/txtEditDescripcion"
+        android:layout_width="313dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Descripcion"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.143"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEditPeso" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEditProvincia" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

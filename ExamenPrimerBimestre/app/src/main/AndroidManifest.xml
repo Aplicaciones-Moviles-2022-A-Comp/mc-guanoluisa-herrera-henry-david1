@@ -10,19 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExamenPrimerBimestre">
         <activity
-            android:name=".EditarRaza"
+            android:name=".EditarIngrediente"
             android:exported="false" />
         <activity
-            android:name=".CrearRaza"
+            android:name=".CrearIngrediente"
             android:exported="false" />
         <activity
-            android:name=".Raza"
+            android:name=".Ingrediente"
             android:exported="false" />
         <activity
-            android:name=".EditarEspecie"
+            android:name=".EditarPlato"
             android:exported="false" />
         <activity
-            android:name=".CrearEspecie"
+            android:name=".CrearPlato"
             android:exported="false" />
         <activity
             android:name=".Plato"

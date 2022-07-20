@@ -3,7 +3,7 @@ package com.example.examenprimerbimestre
 class BBaseDatosMemoria {
     companion object{
         val arregloBEspecie = arrayListOf<BPlato>()
-        val arregloBRaza = arrayListOf<BRaza>()
+        val arregloBRaza = arrayListOf<BIngrediente>()
         init {
             arregloBEspecie
                 .add(

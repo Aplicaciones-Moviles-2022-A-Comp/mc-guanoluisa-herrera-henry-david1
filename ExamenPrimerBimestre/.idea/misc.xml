@@ -4,6 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/henry.guanoluisa/Documents/github/Henry_Guanoluisa/ExamenPrimerBimestre/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/henry.guanoluisa/Documents/github/mc-guanoluisa-herrera-henry-david1/ExamenPrimerBimestre/app/src/main/res/layout/activity_crear_especie.xml" value="0.33" />
+        <entry key="..\:/Users/henry.guanoluisa/Documents/github/mc-guanoluisa-herrera-henry-david1/ExamenPrimerBimestre/app/src/main/res/layout/activity_crear_raza.xml" value="0.33" />
+        <entry key="..\:/Users/henry.guanoluisa/Documents/github/mc-guanoluisa-herrera-henry-david1/ExamenPrimerBimestre/app/src/main/res/layout/activity_editar_especie.xml" value="0.5717761557177615" />
+        <entry key="..\:/Users/henry.guanoluisa/Documents/github/mc-guanoluisa-herrera-henry-david1/ExamenPrimerBimestre/app/src/main/res/layout/activity_editar_raza.xml" value="0.33" />
+        <entry key="..\:/Users/henry.guanoluisa/Documents/github/mc-guanoluisa-herrera-henry-david1/ExamenPrimerBimestre/app/src/main/res/layout/activity_especie.xml" value="0.33" />
+        <entry key="..\:/Users/henry.guanoluisa/Documents/github/mc-guanoluisa-herrera-henry-david1/ExamenPrimerBimestre/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/henry.guanoluisa/Documents/github/mc-guanoluisa-herrera-henry-david1/ExamenPrimerBimestre/app/src/main/res/layout/activity_raza.xml" value="0.25" />
       </map>
     </option>
   </component>

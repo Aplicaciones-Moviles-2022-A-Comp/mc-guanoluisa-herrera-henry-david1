@@ -26,10 +26,10 @@ class Plato : AppCompatActivity() {
                 val listView = findViewById<ListView>(R.id.lv_list_view)
                 val data = result.data
                 val nuevoNombrePlato = data?.getStringExtra("nuevoNombrePlato").toString()
-                val nuevoPrecio = data?.getStringExtra("nuevoPrecio").toString().toDouble()
-                val nuevaRegion = data?.getStringExtra("nuevaRegion").toString()
-                val nuevaProvincia = data?.getStringExtra("nuevaProvincia").toString()
-                val nuevaDecripcion = data?.getStringExtra("nuevaDecripcion").toString()
+                val nuevoPrecio = data?.getStringExtra("nuevoPrecioPlato").toString().toDouble()
+                val nuevaRegion = data?.getStringExtra("nuevoRegionPlato").toString()
+                val nuevaProvincia = data?.getStringExtra("nuevoProvinciaPlato").toString()
+                val nuevaDecripcion = data?.getStringExtra("nuevaDescripcionPlato").toString()
                 BBaseDatosMemoria.arregloBEspecie.add(BPlato(nuevoNombrePlato, nuevoPrecio, nuevaRegion, nuevaProvincia, nuevaDecripcion))
                 val adaptador = ArrayAdapter(
                     this, // Contexto
@@ -53,7 +53,7 @@ class Plato : AppCompatActivity() {
         val botonAnadirListView = findViewById<Button>(R.id.btnCrearRaza)
         botonAnadirListView
             .setOnClickListener {
-                abrirActividadConParametros(CrearEspecie::class.java)
+                abrirActividadConParametros(CrearPlato::class.java)
 
             }
         registerForContextMenu(listView)
@@ -76,7 +76,7 @@ class Plato : AppCompatActivity() {
     ): Boolean {
         return when (item.itemId) {
             R.id.mi_editar -> {
-                val i = Intent(this, EditarEspecie::class.java)
+                val i = Intent(this, EditarPlato::class.java)
                 i.putExtra("idEspecieEditar", "${BBaseDatosMemoria.arregloBEspecie[idItemSeleccionado].nombre}");
                 startActivity(i);
                 return true
@@ -86,7 +86,7 @@ class Plato : AppCompatActivity() {
                 return true
             }
             R.id.mi_ver_raza -> {
-                val i = Intent(this, Raza::class.java)
+                val i = Intent(this, Ingrediente::class.java)
                 i.putExtra("idEspecie", "${BBaseDatosMemoria.arregloBEspecie[idItemSeleccionado].nombre}");
                 startActivity(i)
                 return true

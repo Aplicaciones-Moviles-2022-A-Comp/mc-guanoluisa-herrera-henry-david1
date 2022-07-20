@@ -5,24 +5,19 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.RadioButton
 import android.widget.TextView
 
-class EditarEspecie : AppCompatActivity() {
+class EditarPlato : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_editar_especie)
-        val titulo = findViewById<TextView>(R.id.textNombreEspecie)
-        val nombrePlato = findViewById<EditText>(R.id.txtnewNombreRaza)
-        val precioPlato = findViewById<EditText>(R.id.txtEditPiel)
-        val regionPlato = findViewById<RadioButton>(R.id.rdb_Edittrue)
-        val provinciaPlato = findViewById<EditText>(R.id.txtEditPeso)
-        val descripcionPlato = findViewById<EditText>(R.id.txtEditNumero)
-        val boton = findViewById<Button>(R.id.btnCrearNuevaRaza)
-        var amamantan = false
-        /*if(amamantanEspecie.isChecked){
-            amamantan = true
-        }*/
+        val titulo = findViewById<TextView>(R.id.textNombrePlato)
+        val nombrePlato = findViewById<EditText>(R.id.txtIngrediente1)
+        val precioPlato = findViewById<EditText>(R.id.txtEditPrecioPlato)
+        val regionPlato = findViewById<EditText>(R.id.txtEditRegion)
+        val provinciaPlato = findViewById<EditText>(R.id.txtEditProvincia)
+        val descripcionPlato = findViewById<EditText>(R.id.txtEditRegion)
+        val boton = findViewById<Button>(R.id.btnCrearNewPlato)
         val bundle = intent.extras
         var indice = bundle?.getString("idEspecieEditar")
         if (indice == null)

@@ -5,50 +5,50 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FF9800"
-    tools:context=".EditarRaza">
+    tools:context=".EditarIngrediente">
 
     <EditText
-        android:id="@+id/txtUpdateRegionRaza"
+        android:id="@+id/txtUpdateIng3"
         android:layout_width="313dp"
         android:layout_height="42dp"
         android:layout_marginTop="24dp"
-        android:hint="Alimentación"
+        android:hint="Ingrediente 3"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.408"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtUpdateNombreCientifico" />
+        app:layout_constraintTop_toBottomOf="@+id/txtUpdateIng2" />
 
     <EditText
-        android:id="@+id/txtUpdateNombreCientifico"
+        android:id="@+id/txtUpdateIng2"
         android:layout_width="313dp"
         android:layout_height="42dp"
-        android:layout_marginTop="24dp"
-        android:hint="Nombre Cientifico"
+        android:layout_marginTop="12dp"
+        android:hint="Ingrediente 2"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.408"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtUpdateNombreRaza" />
+        app:layout_constraintTop_toBottomOf="@+id/txtUpdateIng1" />
 
     <EditText
-        android:id="@+id/txtUpdateEsperanzaVida"
+        android:id="@+id/txtUpdateIng4"
         android:layout_width="313dp"
         android:layout_height="42dp"
         android:layout_marginTop="24dp"
-        android:hint="Esperanza de Vida"
+        android:hint="Ingrediente 4"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.408"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtUpdateRegionRaza" />
+        app:layout_constraintTop_toBottomOf="@+id/txtUpdateIng3" />
 
     <EditText
-        android:id="@+id/txtUpdateNombreRaza"
+        android:id="@+id/txtUpdateIng1"
         android:layout_width="313dp"
         android:layout_height="42dp"
         android:layout_marginTop="108dp"
-        android:hint="Nombre"
+        android:hint="Ingrediente 1"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.408"
@@ -59,62 +59,21 @@
         android:id="@+id/btnUpdateRaza"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:text="Actualizar"
+        android:layout_marginBottom="164dp"
         android:backgroundTint="#FF403C36"
+        android:text="Actualizar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rdg_amantan"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <RadioGroup
-        android:id="@+id/rdg_amantan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.031"
-        tools:ignore="MissingConstraints">
-
-        <RadioButton
-            android:id="@+id/rdb_UpdateDomesticadoTrue"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="si" />
-
-        <RadioButton
-            android:id="@+id/rdb_DomesticadoFalse"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:checked="false"
-            android:text="no" />
-    </RadioGroup>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="¿Domesticado?"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.126"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtUpdateEsperanzaVida" />
-
-    <TextView
-        android:id="@+id/textTituloEditarRaza"
+        android:id="@+id/txtTituloIngrediente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Actualizar"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtUpdateNombreRaza"
+        app:layout_constraintBottom_toTopOf="@+id/txtUpdateIng1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.819"
         app:layout_constraintStart_toStartOf="parent"
@@ -127,10 +86,24 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="Actualizar"
-        app:layout_constraintBottom_toTopOf="@+id/txtUpdateNombreRaza"
+        app:layout_constraintBottom_toTopOf="@+id/txtUpdateIng1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.114"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.061" />
+
+    <EditText
+        android:id="@+id/txtUpdateIng5"
+        android:layout_width="313dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Ingrediente 5"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.408"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUpdateIng4" />
 </androidx.constraintlayout.widget.ConstraintLayout>
