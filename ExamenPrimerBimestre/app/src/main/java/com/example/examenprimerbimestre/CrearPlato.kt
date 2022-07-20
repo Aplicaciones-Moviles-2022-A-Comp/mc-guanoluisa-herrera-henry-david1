@@ -5,11 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 
 class CrearPlato : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_crear_especie)
+        setContentView(R.layout.activity_crear_plato)
         val nombrePlato = findViewById<EditText>(R.id.txtnewNombrePlato)
         val precioPlato = findViewById<EditText>(R.id.txtNewPrecio)
         val regionPlato = findViewById<EditText>(R.id.txtNewRegion)
@@ -18,11 +19,23 @@ class CrearPlato : AppCompatActivity() {
         val boton = findViewById<Button>(R.id.btnCrearIngrdtes)
         boton
             .setOnClickListener {
-                devolverRespuesta(nombrePlato.text.toString(),
-                    precioPlato.text.toString().toDouble(), regionPlato.text.toString(), provinciaPlato.text.toString(), descripcionPlato.text.toString())
+
+
+                if(nombrePlato.text.isEmpty() || precioPlato.text.isEmpty() ||
+                        regionPlato.text.isEmpty() || provinciaPlato.text.isEmpty() || descripcionPlato.text.isEmpty()){
+                    val toast = Toast.makeText(this, "Campos son obligatorios", Toast.LENGTH_SHORT)
+                    toast.show()
+                }else{
+                    devolverRespuesta(nombrePlato.text.toString(),
+                        precioPlato.text.toString().toDouble(), regionPlato.text.toString(), provinciaPlato.text.toString(), descripcionPlato.text.toString())
+
+                }
+
+
             }
     }
     fun devolverRespuesta(nombre:String, precio:Double, region:String, provincia:String, descripcion:String){
+
         val intentDevolverParametros = Intent()
         intentDevolverParametros.putExtra("nuevoNombrePlato", nombre )
         intentDevolverParametros.putExtra("nuevoPrecioPlato", precio )

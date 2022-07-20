@@ -7,11 +7,12 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 
 class EditarPlato : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_editar_especie)
+        setContentView(R.layout.activity_editar_plato)
         val titulo = findViewById<TextView>(R.id.textNombrePlato)
         val nombrePlato = findViewById<EditText>(R.id.txtEditNombrePlato)
         val precioPlato = findViewById<EditText>(R.id.txtEditPrecioPlato)
@@ -24,7 +25,6 @@ class EditarPlato : AppCompatActivity() {
         if (indice == null)
             indice = ""
         titulo.setText("$indice")
-        Log.d("indice--plato", indice)
         BBaseDatosMemoria.arregloBPlato.filter { it.nombre == indice }
             .map {
                 nombrePlato.setText(it.nombre)
@@ -34,8 +34,17 @@ class EditarPlato : AppCompatActivity() {
                 descripcionPlato.setText(it.descripcion)
             }
         boton.setOnClickListener {
-            editarEspecie(indice, nombrePlato, precioPlato, regionPlato, provinciaPlato, descripcionPlato)
-            abrirActividad(Plato::class.java)
+
+            if(nombrePlato.text.isEmpty() || precioPlato.text.isEmpty() ||
+                regionPlato.text.isEmpty() || provinciaPlato.text.isEmpty() || descripcionPlato.text.isEmpty()){
+                val toast = Toast.makeText(this, "Campos son obligatorios", Toast.LENGTH_SHORT)
+                toast.show()
+            }else{
+                editarEspecie(indice, nombrePlato, precioPlato, regionPlato, provinciaPlato, descripcionPlato)
+                abrirActividad(Plato::class.java)
+            }
+
+
         }
 
         }

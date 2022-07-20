@@ -8,7 +8,7 @@ import android.widget.*
 class EditarIngrediente : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_editar_raza)
+        setContentView(R.layout.activity_editar_ingrediente)
         val titulo = findViewById<TextView>(R.id.txtTituloPlato)
         val bundle = intent.extras
         var indice = bundle?.getString("nombrePlato")
@@ -33,7 +33,14 @@ class EditarIngrediente : AppCompatActivity() {
             }
 
         boton.setOnClickListener {
-            editarIngrediente(indice, ingrediente1, ingrediente2, ingrediente3, ingrediente4, ingrediente5)
+
+            if(ingrediente1.text.isEmpty() || ingrediente2.text.isEmpty() || ingrediente3.text.isEmpty()
+                || ingrediente4.text.isEmpty() || ingrediente5.text.isEmpty()){
+                val toast = Toast.makeText(this, "Campos son obligatorios", Toast.LENGTH_SHORT)
+                toast.show()
+            }else{
+                editarIngrediente(indice, ingrediente1, ingrediente2, ingrediente3, ingrediente4, ingrediente5)
+            }
         }
     }
     fun editarIngrediente(

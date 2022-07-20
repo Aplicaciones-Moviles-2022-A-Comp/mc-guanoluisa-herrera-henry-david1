@@ -16,7 +16,7 @@ class Ingrediente : AppCompatActivity() {
     var nombrePlato = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_raza)
+        setContentView(R.layout.activity_ingrediente)
         val titulo = findViewById<TextView>(R.id.textView_ingrediente)
         val listView = findViewById<ListView>(R.id.lv_list_view)
         val botonRegresar = findViewById<Button>(R.id.btnRegresarIng)

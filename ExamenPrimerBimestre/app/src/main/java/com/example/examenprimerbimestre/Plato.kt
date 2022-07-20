@@ -43,7 +43,7 @@ class Plato : AppCompatActivity() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_especie)
+        setContentView(R.layout.activity_plato)
         val listView = findViewById<ListView>(R.id.lv_list_view)
         val adaptador = ArrayAdapter(
             this, // Contexto
