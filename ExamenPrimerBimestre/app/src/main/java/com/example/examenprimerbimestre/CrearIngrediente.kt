@@ -15,7 +15,7 @@ class CrearIngrediente : AppCompatActivity() {
         val ingrediente3 = findViewById<EditText>(R.id.txtIngrediente3)
         val ingrediente4 = findViewById<EditText>(R.id.txtIngrediente4)
         val ingrediente5 = findViewById<EditText>(R.id.txtIngrediente5)
-        val boton = findViewById<Button>(R.id.btnCrearNewPlato)
+        val boton = findViewById<Button>(R.id.btnCrearIngrdtes)
         val bundle = intent.extras
         var plato = bundle?.getString("idPlatoCrear")
         if(plato == null){
@@ -31,7 +31,7 @@ class CrearIngrediente : AppCompatActivity() {
             }
     }
     fun crearIngrediente(ingrediente1:String, ingrediente2:String,  ingrediente3:String, ingrediente4:String, ingrediente5:String, nombrePlato:String){
-        BBaseDatosMemoria.arregloBRaza.add(BIngrediente(ingrediente1, ingrediente2, ingrediente3, ingrediente4, ingrediente5, nombrePlato ))
+        BBaseDatosMemoria.arregloBIngrediente.add(BIngrediente(ingrediente1, ingrediente2, ingrediente3, ingrediente4, ingrediente5, nombrePlato ))
 
     }
 

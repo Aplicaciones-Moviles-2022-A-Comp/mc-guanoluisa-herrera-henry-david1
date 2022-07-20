@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF9800"
+    android:background="#03A9F4"
     tools:context=".Ingrediente">
 
     <Button
-        android:id="@+id/btnCrearRaza"
+        android:id="@+id/btnCrearIngrediente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -37,7 +37,7 @@
         android:layout_marginTop="124dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCrearRaza" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCrearIngrediente" />
 
     <TextView
         android:id="@+id/textView_ingrediente"
@@ -48,6 +48,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCrearRaza"
+        app:layout_constraintTop_toBottomOf="@+id/btnCrearIngrediente"
         app:layout_constraintVertical_bias="0.78" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,15 +26,16 @@ class Plato : AppCompatActivity() {
                 val listView = findViewById<ListView>(R.id.lv_list_view)
                 val data = result.data
                 val nuevoNombrePlato = data?.getStringExtra("nuevoNombrePlato").toString()
-                val nuevoPrecio = data?.getStringExtra("nuevoPrecioPlato").toString().toDouble()
+                val nuevoPrecio = data?.getDoubleExtra("nuevoPrecioPlato", 0.00)
                 val nuevaRegion = data?.getStringExtra("nuevoRegionPlato").toString()
                 val nuevaProvincia = data?.getStringExtra("nuevoProvinciaPlato").toString()
                 val nuevaDecripcion = data?.getStringExtra("nuevaDescripcionPlato").toString()
-                BBaseDatosMemoria.arregloBEspecie.add(BPlato(nuevoNombrePlato, nuevoPrecio, nuevaRegion, nuevaProvincia, nuevaDecripcion))
+
+                BBaseDatosMemoria.arregloBPlato.add(BPlato(nuevoNombrePlato, nuevoPrecio, nuevaRegion, nuevaProvincia, nuevaDecripcion))
                 val adaptador = ArrayAdapter(
                     this, // Contexto
                     android.R.layout.simple_list_item_1, // como se va a ver (XML)
-                    BBaseDatosMemoria.arregloBEspecie
+                    BBaseDatosMemoria.arregloBPlato
                 )
                 listView.adapter = adaptador
             }
@@ -47,10 +48,10 @@ class Plato : AppCompatActivity() {
         val adaptador = ArrayAdapter(
             this, // Contexto
             android.R.layout.simple_list_item_1, // como se va a ver (XML)
-            BBaseDatosMemoria.arregloBEspecie
+            BBaseDatosMemoria.arregloBPlato
         )
         listView.adapter = adaptador
-        val botonAnadirListView = findViewById<Button>(R.id.btnCrearRaza)
+        val botonAnadirListView = findViewById<Button>(R.id.btnCrearIngrediente)
         botonAnadirListView
             .setOnClickListener {
                 abrirActividadConParametros(CrearPlato::class.java)
@@ -77,17 +78,17 @@ class Plato : AppCompatActivity() {
         return when (item.itemId) {
             R.id.mi_editar -> {
                 val i = Intent(this, EditarPlato::class.java)
-                i.putExtra("idEspecieEditar", "${BBaseDatosMemoria.arregloBEspecie[idItemSeleccionado].nombre}");
+                i.putExtra("idPlatoEditar", "${BBaseDatosMemoria.arregloBPlato[idItemSeleccionado].nombre}");
                 startActivity(i);
                 return true
             }
             R.id.mi_eliminar -> {
-                elimarEspecie()
+                elimarPlato()
                 return true
             }
-            R.id.mi_ver_raza -> {
+            R.id.mi_ver_plato -> {
                 val i = Intent(this, Ingrediente::class.java)
-                i.putExtra("idEspecie", "${BBaseDatosMemoria.arregloBEspecie[idItemSeleccionado].nombre}");
+                i.putExtra("idPlato", "${BBaseDatosMemoria.arregloBPlato[idItemSeleccionado].nombre}");
                 startActivity(i)
                 return true
             }
@@ -101,18 +102,18 @@ class Plato : AppCompatActivity() {
         val intentExplicito = Intent(this, clase)
         resultLauncher.launch(intentExplicito)
     }
-    fun elimarEspecie(){
+    fun elimarPlato(){
         val builder = AlertDialog.Builder(this)
         builder.setMessage("Desea eliminar")
             .setPositiveButton("Aceptar",
                 DialogInterface.OnClickListener { dialog, id ->
-                    BBaseDatosMemoria.arregloBEspecie.removeAt(idItemSeleccionado)
+                    BBaseDatosMemoria.arregloBPlato.removeAt(idItemSeleccionado)
                     Log.i("context-menu", "Editar Posicion: ${idItemSeleccionado}")
                     val listView = findViewById<ListView>(R.id.lv_list_view)
                     val adaptador = ArrayAdapter(
                         this, // Contexto
                         android.R.layout.simple_list_item_1, // como se va a ver (XML)
-                        BBaseDatosMemoria.arregloBEspecie
+                        BBaseDatosMemoria.arregloBPlato
                     )
                     listView.adapter = adaptador
                 })

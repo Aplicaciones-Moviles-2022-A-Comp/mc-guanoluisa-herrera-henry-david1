@@ -38,10 +38,10 @@
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTituloIngrediente" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloPlato" />
 
     <Button
-        android:id="@+id/btnCrearNewPlato"
+        android:id="@+id/btnCrearIngrdtes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#FF403C36"
@@ -65,7 +65,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtNewRegion" />
 
     <TextView
-        android:id="@+id/txtTituloIngrediente"
+        android:id="@+id/txtTituloPlato"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"

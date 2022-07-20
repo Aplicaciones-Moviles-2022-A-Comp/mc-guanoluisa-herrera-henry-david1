@@ -45,8 +45,8 @@ class BIngrediente(
     }
 
     override fun toString(): String {
-        return "$nombrePlato\nIngrediente1 = $ingrediente1\nIngrediente2 = $ingrediente2\nIngrediente3 = $ingrediente3\n" +
-                "Ingrediente4 = $ingrediente5\n Ingrediente5 = $ingrediente5"
+        return "$nombrePlato\n\nIngrediente 1 : $ingrediente1\nIngrediente 2 : $ingrediente2\nIngrediente 3 : $ingrediente3\n" +
+                "Ingrediente 4 : $ingrediente4\nIngrediente 5 : $ingrediente5"
     }
 
 }

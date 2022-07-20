@@ -29,14 +29,14 @@ class Ingrediente : AppCompatActivity() {
         if (nombrePlato == null)
             nombrePlato = ""
         titulo.setText("$nombrePlato")
-        val nuevoArreglo = BBaseDatosMemoria.arregloBRaza.filter { it.nombrePlato == nombrePlato }
+        val nuevoArreglo = BBaseDatosMemoria.arregloBIngrediente.filter { it.nombrePlato == nombrePlato }
         val adaptador = ArrayAdapter(
             this, // Contexto
             android.R.layout.simple_list_item_1, // como se va a ver (XML)
             nuevoArreglo
         )
         listView.adapter = adaptador
-        val botonAnadirListView = findViewById<Button>(R.id.btnCrearRaza)
+        val botonAnadirListView = findViewById<Button>(R.id.btnCrearIngrediente)
         botonAnadirListView
             .setOnClickListener {
                 val i = Intent(this, CrearIngrediente::class.java)
@@ -65,8 +65,8 @@ class Ingrediente : AppCompatActivity() {
         return when (item.itemId) {
             R.id.mi_editar -> {
                 val i = Intent(this, EditarIngrediente::class.java)
-                val nuevoArreglo = BBaseDatosMemoria.arregloBRaza.filter { it.nombrePlato == nombrePlato }
-                i.putExtra("nombreIngrediente", "${nuevoArreglo[idItemSeleccionado].nombrePlato}");
+                val nuevoArreglo = BBaseDatosMemoria.arregloBIngrediente.filter { it.nombrePlato == nombrePlato }
+                i.putExtra("nombrePlato", "${nuevoArreglo[idItemSeleccionado].nombrePlato}");
                 startActivity(i);
                 return true
             }
@@ -82,13 +82,13 @@ class Ingrediente : AppCompatActivity() {
         builder.setMessage("Desea eliminar")
             .setPositiveButton("Aceptar",
                 DialogInterface.OnClickListener { dialog, id ->
-                    BBaseDatosMemoria.arregloBRaza.removeAt(idItemSeleccionado)
+                    BBaseDatosMemoria.arregloBIngrediente.removeAt(idItemSeleccionado)
                     Log.i("context-menu", "Editar Posicion: ${idItemSeleccionado}")
                     val listView = findViewById<ListView>(R.id.lv_list_view)
                     val adaptador = ArrayAdapter(
                         this, // Contexto
                         android.R.layout.simple_list_item_1, // como se va a ver (XML)
-                        BBaseDatosMemoria.arregloBRaza
+                        BBaseDatosMemoria.arregloBIngrediente
                     )
                     listView.adapter = adaptador
                 })

@@ -7,6 +7,6 @@
         android:id="@+id/mi_eliminar"
         android:title="Eliminar" />
     <item
-        android:id="@+id/mi_ver_raza"
-        android:title="Ver Raza" />
+        android:id="@+id/mi_ver_plato"
+        android:title="Ver" />
 </menu>
