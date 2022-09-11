@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/henry.guanoluisa/Documents/github/Henry_Guanoluisa/ExamenPrimerBimestre/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/henry.guanoluisa/Documents/github/mc-guanoluisa-herrera-henry-david1/ExamenPrimerBimestre/app/src/main/res/layout/activity_crear_especie.xml" value="0.33" />
+        <entry key="..\:/Users/henry.guanoluisa/Documents/github/mc-guanoluisa-herrera-henry-david1/ExamenPrimerBimestre/app/src/main/res/layout/activity_crear_ingrediente.xml" value="0.25" />
+        <entry key="..\:/Users/henry.guanoluisa/Documents/github/mc-guanoluisa-herrera-henry-david1/ExamenPrimerBimestre/app/src/main/res/layout/activity_crear_raza.xml" value="0.33" />
+        <entry key="..\:/Users/henry.guanoluisa/Documents/github/mc-guanoluisa-herrera-henry-david1/ExamenPrimerBimestre/app/src/main/res/layout/activity_editar_especie.xml" value="0.5" />
+        <entry key="..\:/Users/henry.guanoluisa/Documents/github/mc-guanoluisa-herrera-henry-david1/ExamenPrimerBimestre/app/src/main/res/layout/activity_editar_raza.xml" value="0.33" />
+        <entry key="..\:/Users/henry.guanoluisa/Documents/github/mc-guanoluisa-herrera-henry-david1/ExamenPrimerBimestre/app/src/main/res/layout/activity_especie.xml" value="0.33" />
+        <entry key="..\:/Users/henry.guanoluisa/Documents/github/mc-guanoluisa-herrera-henry-david1/ExamenPrimerBimestre/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/henry.guanoluisa/Documents/github/mc-guanoluisa-herrera-henry-david1/ExamenPrimerBimestre/app/src/main/res/layout/activity_raza.xml" value="0.25" />
+        <entry key="..\:/Users/henry.guanoluisa/Documents/github/mc-guanoluisa-herrera-henry-david1/ExamenPrimerBimestre/app/src/main/res/menu/menu.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

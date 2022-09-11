@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ExamenPrimerBimestre</string>
+    <string name="plato_tipico">Plato Típico</string>
+    <string name="autor_epn">Henry Guanoluisa</string>
+    <string name="btn_main">VER PLATOS TIPICOS</string>
+    <string name="title_edit_plato">Editar plato</string>
+    <string name="title_nombre_plato">Nombre plato</string>
+    <string name="txt_nombre_plato">Nombre</string>
+    <string name="txt_precio_plato">Precio</string>
+    <string name="txt_region_plato">Region</string>
+    <string name="txt_provincia_plato">Provincia</string>
+    <string name="txt_descripcion_plato">Descripcion</string>
+</resources>
